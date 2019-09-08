@@ -1,0 +1,45 @@
+<main>
+  <div class="content">
+    <header>
+      <h2 class="text-center font-weight-bold">Template-Driven Form</h2>
+    </header>
+
+    <form #feedback="ngForm" (ngSubmit)="submitFeedback(feedback)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" ngModel name="name" id="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          ngModel
+          name="email"
+          id="email"
+          inputmode="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">What do you think about this event?</label>
+        <textarea
+          name="comment"
+          ngModel
+          id="comment"
+          cols="20"
+          rows="5"
+          class="form-control"
+        ></textarea>
+      </div>
+
+      <input
+        type="submit"
+        class="btn btn-success btn-block"
+        value="Submit Feedback"
+        [disabled]="!feedback.valid"
+      />
+    </form>
+  </div>
+</main>
