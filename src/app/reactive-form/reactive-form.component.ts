@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReactiveFormComponent implements OnInit {
   feedback: FormGroup;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.feedback = new FormGroup({
@@ -19,7 +19,6 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   submitFeedback() {
-    console.log('form values: ', this.feedback.value)
+    console.log('form values: ', this.feedback.value);
   }
-
 }
