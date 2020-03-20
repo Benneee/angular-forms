@@ -1,6 +1,6 @@
 <main>
   <div class="content">
-    <header>
+    <header class=" mt-5">
       <h2 class="text-center font-weight-bold">Template-Driven Form</h2>
     </header>
 
@@ -44,12 +44,14 @@
         ></textarea>
       </div>
 
-      <input
+      <button
         type="submit"
         class="btn btn-success btn-block"
         value="Submit Feedback"
         [disabled]="!feedback.valid"
-      />
+      >
+        Submit
+      </button>
     </form>
   </div>
 </main>
